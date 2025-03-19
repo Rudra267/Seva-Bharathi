@@ -22,7 +22,7 @@ html, body {
 }
 /* header  */
 .header-1 {
-  background-color: var(--primary-color);
+  background-color: #eba83c;
   padding: 10px 0;
 }
 
@@ -756,7 +756,7 @@ border-radius: 50px;
 }
 .border-top-half-primary {
     position: relative;
-    padding-bottom: 1rem;
+    padding: 1rem;
     margin-bottom: 1rem;
 }
 
