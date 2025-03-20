@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parking Areas</title>
+    <title>Responsive Cards</title>
     <style>
         * {
             margin: 0;
@@ -12,54 +12,72 @@
             font-family: Arial, sans-serif;
         }
         body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
             background-color: #f4f4f4;
-            text-align: center;
             padding: 20px;
         }
-        .parking-section {
-            max-width: 1200px;
-            margin: auto;
-        }
-        .parking-section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #333;
-        }
-        .parking-gallery {
+        .container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            width: 100%;
         }
-        .parking-gallery img {
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
-            border-radius: 8px;
-            transition: transform 0.3s;
         }
-        .parking-gallery img:hover {
-            transform: scale(1.05);
-        }
-        @media (max-width: 600px) {
-            .parking-section h2 {
-                font-size: 1.5rem;
-            }
+        .card h3 {
+            padding: 15px;
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
-    <section class="parking-section">
-        <h2>Parking Areas</h2>
-        <div class="parking-gallery">
-            <img src="https://via.placeholder.com/300" alt="Parking Area 1">
-            <img src="https://via.placeholder.com/300" alt="Parking Area 2">
-            <img src="https://via.placeholder.com/300" alt="Parking Area 3">
-            <img src="https://via.placeholder.com/300" alt="Parking Area 4">
-            <img src="https://via.placeholder.com/300" alt="Parking Area 5">
-            <img src="https://via.placeholder.com/300" alt="Parking Area 6">
-            <img src="https://via.placeholder.com/300" alt="Parking Area 7">
-            <img src="https://via.placeholder.com/300" alt="Parking Area 8">
+    <div class="ourservice">
+        <div class="card">
+            <img src="./service/1.jpg" alt="Orphanage">
+            <h3>Orphanage</h3>
         </div>
-    </section>
+        <div class="card">
+            <img src="service/2.jpg" alt="Old Age Home">
+            <h3>Old Age Home</h3>
+        </div>
+        <div class="card">
+            <img src="service/3.jpg" alt="Education & Recreation">
+            <h3>Education & Recreation</h3>
+        </div>
+        <div class="card">
+            <img src="./service/4.jpg" alt="Spiritual Guidance">
+            <h3>Spiritual Guidance</h3>
+        </div>
+        <div class="card">
+            <img src="./service/5.jpg" alt="Employment Support">
+            <h3>Employment Support</h3>
+        </div>
+        <div class="card">
+            <img src="./service/6.jpg" alt="Temple Restoration">
+            <h3>Temple Restoration</h3>
+        </div>
+        <div class="card">
+            <img src="./service/7.jpg" alt="Ayurveda Programs">
+            <h3>Ayurveda Programs</h3>
+        </div>
+    </div>
 </body>
 </html>
